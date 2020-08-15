@@ -44,13 +44,13 @@ plt.hist(df.quality,bins=6,alpha=0.5,histtype='bar',ec='black')
 plt.title('Distribution of the Quality')
 plt.xlabel('Quality')
 plt.ylabel('Count')
-plt.show()
 
 #boxplot of quality and alcohol
 plt.figure(figsize=(8,5))
 sns.boxplot(x='quality',y='alcohol',data=df,palette='GnBu_d')
 plt.title("Boxplot of Quality and Alcohol")
 plt.show()
+
 cols = ["total sulfur dioxide","free sulfur dioxide","residual sugar","fixed acidity","volatile acidity","alcohol","sulphates","pH","density", "citric acid", "chlorides"]
 
 #separate data into training and test sets and choose state so that results are repeatable
@@ -83,6 +83,7 @@ distances, indices = nbrs.kneighbors(X)
 distances = np.sort(distances, axis=0)
 distances = distances[:,1]
 plt.plot(distances)
+plt.title("finding optimal eps value for DBSCAN using elbow method")
 
 params = {'n_clusters': 2, 'eps': 2, 'min_samples': 5}
 
@@ -199,6 +200,7 @@ plt.scatter(manifold_3Da[:,1], manifold_3Da[:,2], marker='x', cmap='jet')
 plt.xlabel("Isomap Component 2")
 plt.ylabel("Isomap Component 3")
 
+plt.show()
 
 #pearson correlation coefficient for all the Isomap components with quality
 corr1 = scipy.stats.pearsonr(manifold_3Da[:,0], df['quality'])
