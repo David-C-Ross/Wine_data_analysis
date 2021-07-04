@@ -1,6 +1,6 @@
 # Wine_data_analysis
 
-In this repository I analyzed the the white wine data set found at [UCI machine learning repository](https://archive.ics.uci.edu/ml/datasets/wine+quality).
+In this repository I analyzed the white wine data set found at [UCI machine learning repository](https://archive.ics.uci.edu/ml/datasets/wine+quality).
 I used a variety of approaches such as a SVM with a rbf kernel, neural network and clustering algorithms to predict the quality of the wine based on the given
 meta-data:
 * sulfur dioxide
